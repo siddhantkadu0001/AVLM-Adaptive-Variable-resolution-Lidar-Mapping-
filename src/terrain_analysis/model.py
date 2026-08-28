@@ -25,9 +25,9 @@ def classify_terrain(points, height_threshold=0.15, flatness_threshold=0.05):
 
 
 if __name__ == "__main__":
-    from loader import generate_fake_point_cloud
-    from filters import remove_outliers, downsample
-    from alignment import align_to_vehicle_frame
+    from src.preprocessing.loader import generate_fake_point_cloud
+    from src.preprocessing.filters import remove_outliers, downsample
+    from src.preprocessing.alignment import align_to_vehicle_frame
 
     points = generate_fake_point_cloud(num_points=1000)
     points = remove_outliers(points, max_distance=60.0)
