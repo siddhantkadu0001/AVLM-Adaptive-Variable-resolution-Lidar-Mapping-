@@ -32,4 +32,4 @@ if __name__ == "__main__":
     test_distances = [3.0, 8.0, 15.0, 35.0, 60.0, 90.0, 150.0]
     for d in test_distances:
         cell_size = get_cell_size(d)
-        print(f"Distance {d}m -> cell size: {cell_size}")
+        print(f"Distance {d}m -> cell size: {cell_size}")   
