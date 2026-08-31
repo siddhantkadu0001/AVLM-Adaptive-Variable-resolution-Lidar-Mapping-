@@ -1,9 +1,13 @@
+```
  █████╗ ██╗   ██╗██╗     ███╗   ███╗
 ██╔══██╗██║   ██║██║     ████╗ ████║
 ███████║██║   ██║██║     ██╔████╔██║
 ██╔══██║╚██╗ ██╔╝██║     ██║╚██╔╝██║
 ██║  ██║ ╚████╔╝ ███████╗██║ ╚═╝ ██║
 ╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝     ╚═╝
+```
+
+### Adaptive Variable-Resolution 2.5D Lidar Mapping
 
 
 <p align="center">
@@ -135,10 +139,11 @@ AVLM processes LiDAR data through the following pipeline:
                  └──────────────────────┘
 
 ---
-
 ## 📈 Results
 
-The following results are based on the **AVLM (Adaptive Variable-Level Mapping)** implementation.
+### AVLM Results
+
+The following results represent the **AVLM (Adaptive Variable-Level Mapping)** approach.
 
 | Metric | AVLM Result |
 |---|---|
@@ -153,7 +158,9 @@ The following results are based on the **AVLM (Adaptive Variable-Level Mapping)*
 
 ## 🖥️ Dashboard Preview
 
-The dashboard provides a real-time visualization of the **normal 2.5D variable-resolution grid implementation** that we have completed.
+### Normal Implementation
+
+The dashboard provides a real-time visualization of the **normal 2.5D variable-resolution grid implementation** that we have developed.
 
 <p align="center">
   <img src="docs/images/dashboard.png" alt="Normal 2.5D Grid Dashboard" width="1000">
