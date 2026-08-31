@@ -4,8 +4,10 @@
 ██╔══██║╚██╗ ██╔╝██║     ██║╚██╔╝██║
 ██║  ██║ ╚████╔╝ ███████╗██║ ╚═╝ ██║
 ╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝     ╚═╝
+
+
 <p align="center">
-  <img src="docs/images/AVLM_diagram.jpeg" alt="AVLM Banner" width="900">
+  <img src="docs/images/AVLM_diagram.jpeg" alt="AVLM Banner" width="800">
 </p>
 
 # AVLM — Adaptive Variable-Resolution 2.5D LiDAR Mapping
@@ -136,25 +138,25 @@ AVLM processes LiDAR data through the following pipeline:
 
 ## 📈 Results
 
-Current results are based on **simulated data**.
+The following results are based on the **AVLM (Adaptive Variable-Level Mapping)** implementation.
 
-| Metric | Result |
-|---|---:|
+| Metric | AVLM Result |
+|---|---|
 | **Memory Savings** | ~31% vs. uniform high-resolution grid |
 | **Core Pipeline Performance** | ~29 FPS |
 | **Live Rendering Performance** | ~12 FPS |
 | **Pipeline Status** | Fully automated & tested end-to-end |
 
-> **Note:** These results are based on simulated data. Performance and accuracy may change when evaluated on real-world LiDAR datasets.
+> **Note:** These results are based on simulated data. Performance and accuracy may change when evaluated on real-world datasets.
 
 ---
 
 ## 🖥️ Dashboard Preview
 
-The AVLM dashboard provides a real-time visualization of the generated **2.5D variable-resolution grid**, terrain classification, object classification, and system performance.
+The dashboard provides a real-time visualization of the **normal 2.5D variable-resolution grid implementation** that we have completed.
 
 <p align="center">
-  <img src="docs/images/dashboard.png" alt="AVLM Streamlit Dashboard" width="1000">
+  <img src="docs/images/dashboard.png" alt="Normal 2.5D Grid Dashboard" width="1000">
 </p>
 
 ### Dashboard Features
@@ -165,6 +167,7 @@ The AVLM dashboard provides a real-time visualization of the generated **2.5D va
 - ⚡ Live FPS monitoring
 - 💾 Memory usage monitoring
 - 📊 Pipeline performance metrics
+
 ---
 
 ## 🧠 Core Innovation — Foveated Variable-Resolution Mapping
