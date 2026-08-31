@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def classify_terrain(points, height_threshold=0.15, flatness_threshold=0.05):
+def classify_terrain(points, height_threshold=1.95, flatness_threshold=0.05):
     """
     Simple rule-based terrain classifier.
     Classifies each point as 'drivable' (road) or 'non-drivable' (obstacle/curb/pothole).

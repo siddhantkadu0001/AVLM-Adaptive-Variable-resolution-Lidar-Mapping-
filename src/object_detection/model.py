@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def classify_objects(points, terrain_labels, height_static_threshold=1.0):
+def classify_objects(points, terrain_labels, height_static_threshold=2.8):
     """
     Simple rule-based object classifier.
     Only classifies points already marked as 'non_drivable' by terrain analysis.
