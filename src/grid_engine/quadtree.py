@@ -58,6 +58,8 @@ class VariableResolutionGrid:
         Automatically determines which zone/cell size to use based on distance,
         then places the point into the correct cell (creating it if needed).
         """
+        if not np.isfinite(x) or not np.isfinite(y) or not np.isfinite(z):
+         return
         distance = np.sqrt(x**2 + y**2)
         zone_index, cell_size = self._get_zone_and_cell_size(distance)
         

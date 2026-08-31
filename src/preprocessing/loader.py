@@ -8,6 +8,9 @@ def generate_fake_point_cloud(num_points=5000):
     a few obstacles at various distances, and sparser points far away
     (similar to how real Lidar data is naturally distributed).
     """
+    if num_points <= 0:
+        print("Warning: num_points must be positive, defaulting to 100")
+        num_points = 100
     points_list = []
 
     # 1. Ground plane points - dense, spread across full range, low height

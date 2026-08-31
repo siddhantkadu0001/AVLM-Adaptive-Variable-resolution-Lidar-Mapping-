@@ -36,6 +36,9 @@ def run_pipeline(num_points):
 
 def plot_grid(grid):
     fig, ax = plt.subplots(figsize=(8, 8))
+    if grid.get_cell_count() == 0:
+        ax.text(0.5, 0.5, "No data to display", ha='center', va='center', color='white', transform=ax.transAxes)
+        return fig
 
     for (zone_index, cell_x, cell_y), cell in grid.cells.items():
         color = LABEL_COLORS.get(cell.label, "#000000")
