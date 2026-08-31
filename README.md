@@ -1,4 +1,4 @@
-
+```
  █████╗ ██╗   ██╗██╗     ███╗   ███╗
 ██╔══██╗██║   ██║██║     ████╗ ████║
 ███████║██║   ██║██║     ██╔████╔██║
@@ -8,7 +8,6 @@
 ```
 
 ### Adaptive Variable-Resolution 2.5D Lidar Mapping
-
 
 <p align="center">
   <img src="docs/images/AVLM_diagram.jpeg" alt="AVLM Banner" width="800">
@@ -25,6 +24,7 @@
 </p>
 
 ---
+
 ## 📖 Overview
 
 **AVLM (Adaptive Variable-Resolution 2.5D LiDAR Mapping)** is a deep learning-based perception and mapping pipeline designed to convert raw LiDAR point clouds into an adaptive, **foveated 2.5D grid map**.
@@ -81,6 +81,7 @@ The Streamlit dashboard provides:
 - Object classification
 - Variable-resolution grid visualization
 - Processing performance metrics
+
 ---
 
 ## ⚙️ How It Works
@@ -137,8 +138,10 @@ AVLM processes LiDAR data through the following pipeline:
                  │ Streamlit Dashboard  │
                  │ FPS • Memory • Map   │
                  └──────────────────────┘
+```
 
 ---
+
 ## 📈 Results
 
 ### AVLM Results
@@ -209,6 +212,7 @@ Instead of representing the complete environment using a uniform cell size, AVLM
               │ Coarse    │
               │ Detail    │
               └───────────┘
+```
 
 ---
 
@@ -273,6 +277,7 @@ Instead of representing the complete environment using a uniform cell size, AVLM
                     │ + Performance       │
                     │ Metrics             │
                     └─────────────────────┘
+```
 
 ---
 
@@ -292,9 +297,6 @@ The pipeline is designed for compatibility with **SemanticKITTI**.
 
 ---
 
-````markdown
----
-
 ## 📦 Requirements & Setup
 
 ### Requirements
@@ -312,7 +314,7 @@ Clone the repository:
 ```bash
 git clone <repository-url>
 cd AVLM
-````
+```
 
 Install all dependencies:
 
@@ -330,9 +332,6 @@ python -m streamlit run src/visualization/dashboard.py
 
 ```bash
 python tests/test_grid_engine.py
-```
-
-```
 ```
 
 ---
@@ -386,6 +385,7 @@ AVLM/
 │
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
+```
 
 ---
 
@@ -454,4 +454,3 @@ Potential future enhancements include:
 <p align="center">
   🚗 Adaptive • 🗺️ Efficient • ⚡ Real-Time • 🤖 Intelligent
 </p>
-
