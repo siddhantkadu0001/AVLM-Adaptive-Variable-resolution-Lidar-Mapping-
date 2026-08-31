@@ -10,6 +10,7 @@ from src.object_detection.model import classify_objects
 from src.fusion.label_fusion import fuse_labels
 from src.grid_engine.projector import project_points_to_grid
 from src.grid_engine.resolution_config import RESOLUTION_ZONES
+from src.visualization.performance import measure_pipeline_fps
 
 
 LABEL_COLORS = {
@@ -60,7 +61,7 @@ st.title("AVLM: Adaptive Variable-Resolution Lidar Mapping")
 num_points = st.sidebar.slider("Number of fake points", 500, 10000, 5000, step=500)
 
 if st.sidebar.button("Run Pipeline"):
-    grid = run_pipeline(num_points)
+    grid, elapsed, fps = measure_pipeline_fps(run_pipeline, num_points)
 
     col1, col2 = st.columns([2, 1])
 
@@ -73,6 +74,8 @@ if st.sidebar.button("Run Pipeline"):
         st.metric("Input Points", num_points)
         st.metric("Grid Cells Created", grid.get_cell_count())
         st.metric("Estimated Memory (bytes)", grid.get_memory_estimate_bytes())
+        st.metric("Processing Time (s)", f"{elapsed:.4f}")
+        st.metric("FPS", f"{fps:.2f}")
 
         naive_memory = num_points * 64
         savings = (1 - grid.get_memory_estimate_bytes() / naive_memory) * 100 if naive_memory > 0 else 0
