@@ -160,7 +160,7 @@ The following results represent the **AVLM (Adaptive Variable-Level Mapping)** a
 ---
 
 ## 🖥️ Dashboard Preview
-
+👉 **[Try it live here](https://avlm-project.streamlit.app)**
 ### Normal Implementation
 
 The dashboard provides a real-time visualization of the **normal 2.5D variable-resolution grid implementation** that we have developed.
