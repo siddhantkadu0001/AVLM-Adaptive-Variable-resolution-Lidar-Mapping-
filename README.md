@@ -341,53 +341,54 @@ python tests/test_grid_engine.py
 ```text
 AVLM/
 │
-├── data/
-│   └──                         # Dataset files
+├── data/                            # Dataset files (for future real-data integration)
 │
 ├── src/
+│   ├── __init__.py
 │   │
 │   ├── preprocessing/
-│   │   └──                     # Point cloud loading,
-│   │                             # filtering & alignment
+│   │   ├── __init__.py
+│   │   ├── loader.py                # Point cloud loading (fake + real data)
+│   │   ├── filters.py               # Noise removal, downsampling
+│   │   └── alignment.py             # Vehicle-centric coordinate alignment
 │   │
 │   ├── terrain_analysis/
-│   │   └──                     # Drivable vs
-│   │                             # non-drivable classification
+│   │   ├── __init__.py
+│   │   └── model.py                 # Drivable vs non-drivable classification
 │   │
 │   ├── object_detection/
-│   │   └──                     # Static vs dynamic
-│   │                             # object classification
+│   │   ├── __init__.py
+│   │   └── model.py                 # Static vs dynamic object classification
 │   │
 │   ├── fusion/
-│   │   └──                     # Terrain + object
-│   │                             # label fusion
+│   │   ├── __init__.py
+│   │   └── label_fusion.py          # Merges terrain + object labels
 │   │
 │   ├── grid_engine/
-│   │   └──                     # Quadtree variable-
-│   │                             # resolution grid
+│   │   ├── __init__.py
+│   │   ├── resolution_config.py     # Zone radius / cell size settings
+│   │   ├── quadtree.py              # Core variable-resolution grid structure
+│   │   └── projector.py             # 3D → 2.5D projection logic
 │   │
 │   └── visualization/
-│       └── dashboard.py        # Streamlit dashboard
+│       ├── __init__.py
+│       ├── dashboard.py             # Streamlit dashboard
+│       └── performance.py           # FPS / latency measurement
 │
 ├── tests/
-│   └──                         # Automated test suite
-│
-├── notebooks/
-│   └──                         # Experiments & analysis
-│
-├── outputs/
-│   └──                         # Generated results
+│   └── test_grid_engine.py          # Automated test suite (grid engine)
 │
 ├── docs/
 │   └── images/
-│       ├── avlm-banner.png     # Main project image
-│       └── dashboard.png       # Dashboard screenshot
+│       ├── architecture_diagram.svg # System architecture diagram
+│       └── dashboard_screenshot.png # Dashboard preview
 │
-├── requirements.txt            # Python dependencies
-└── README.md                   # Project documentation
-```
-
----
+├── notebooks/                       # Reserved for future experiments
+├── outputs/                         # Reserved for generated results
+├── models/                          # Reserved for future pretrained weights
+│
+├── requirements.txt                 # Python dependencies
+└── README.md                        # project documentation
 
 ## 📁 Module Description
 
